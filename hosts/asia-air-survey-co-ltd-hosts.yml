@@ -1,0 +1,39 @@
+generated: '2026-10-23'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 2
+  own: 1
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - website
+hosts:
+- host: api.co.jp
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: api.co.jp
+  role: api
+  relation: other-domain
+- host: www.ajiko.co.jp
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - PrivacyPolicy
+  - Newsroom
+  - Leadership
+  - Website
+  serves:
+  - cdn
+  vendor: cloudfront
+  registrable_domain: ajiko.co.jp
+  role: website
+  relation: own

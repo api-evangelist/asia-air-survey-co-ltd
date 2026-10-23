@@ -1,23 +1,69 @@
 aid: asia-air-survey-co-ltd
+
 name: Asia Air Survey Co., Ltd.
-description: 'Asia Air Survey Co., Ltd. is a company surfaced via the API Evangelist harvest backlog (source:
-  vc-portfolio) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Asia Air Survey Co., Ltd. provides aerial survey services across Asia, offering high-resolution mapping, geospatial data collection, and analytics for industries such as construction, agriculture, and environmental monitoring. Established to deliver precise, timely, and cost-effective aerial data solutions, the company leverages advanced drone technology and expert data collection to support planning, compliance, and decision-making for clients worldwide.'
+
 url: https://raw.githubusercontent.com/api-evangelist/asia-air-survey-co-ltd/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-23'
+
 modified: '2026-10-23'
+
 tags:
 - Company
-apis: []
+- AerialSurvey
+- Geospatial
+- DroneTechnology
+- DataAnalytics
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/asia-air-survey-co-ltd-hosts.yml
+- type: Vendors
+  url: vendors/asia-air-survey-co-ltd-vendors.yml
+- type: PrivacyPolicy
+  url: https://www.ajiko.co.jp/privacy/
+- type: Newsroom
+  url: https://www.ajiko.co.jp/news/
+- type: Leadership
+  url: https://www.ajiko.co.jp/ir/management/governance.html
+- type: DomainSecurity
+  url: security/asia-air-survey-co-ltd-domain-security.yml
 - type: Website
   url: http://www.ajiko.co.jp/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-23'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: http://www.ajiko.co.jp/
+    status: 200
+x-enrichment:
+  date: '2026-10-23'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
